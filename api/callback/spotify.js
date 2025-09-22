@@ -4,7 +4,7 @@ import axios from 'axios';
 export default async function handler(req, res) {
     const code = req.query.code || null;
     const YOUR_HOSTINGER_DOMAIN = 'https://cubet.space';
-    const SPOTIFY_REDIRECT_URI = `https://your-vercel-project-name.vercel.app/api/callback/spotify`;
+    const SPOTIFY_REDIRECT_URI = `https://cubet-backend-space.vercel.app/api/callback/spotify`;
 
     try {
         const response = await axios({
@@ -32,4 +32,5 @@ export default async function handler(req, res) {
         console.error('Spotify Callback Error:', error.response ? error.response.data : 'Unknown error');
         res.status(500).send('Error during Spotify authentication.');
     }
+
 }
