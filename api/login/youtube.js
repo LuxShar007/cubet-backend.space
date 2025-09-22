@@ -2,7 +2,7 @@
 export default function handler(req, res) {
     const scope = 'https://www.googleapis.com/auth/youtube.readonly';
     // ?? Replace with your Vercel project name
-    const GOOGLE_REDIRECT_URI = `https://your-vercel-project-name.vercel.app/api/callback/youtube`;
+    const GOOGLE_REDIRECT_URI = `https://cubet-backend-space.vercel.app/api/callback/youtube`;
 
     const authUrl = 'https://accounts.google.com/o/oauth2/v2/auth?' + new URLSearchParams({
         scope: scope,
@@ -14,4 +14,5 @@ export default function handler(req, res) {
     }).toString();
 
     res.redirect(307, authUrl);
+
 }
