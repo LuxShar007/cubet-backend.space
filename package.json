@@ -2,6 +2,7 @@
   "name": "cubet",
   "version": "1.0.0",
   "description": "A music recommendation web app using Spotify and YouTube Music APIs.",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -16,4 +17,5 @@
     "express-session": "^1.18.0",
     "redis": "^4.6.13"
   }
+
 }
