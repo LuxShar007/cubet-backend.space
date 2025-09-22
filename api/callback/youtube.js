@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     const code = req.query.code || null;
     const YOUR_HOSTINGER_DOMAIN = 'https://cubet.space';
     // ?? Replace with your Vercel project name
-    const GOOGLE_REDIRECT_URI = `https://your-vercel-project-name.vercel.app/api/callback/youtube`;
+    const GOOGLE_REDIRECT_URI = `https://cubet-backend-space.vercel.app/api/callback/youtube`;
 
     try {
         const response = await axios({
@@ -30,4 +30,5 @@ export default async function handler(req, res) {
         console.error('YouTube Callback Error:', error.response ? error.response.data : 'Unknown error');
         res.status(500).send('Error during YouTube authentication.');
     }
+
 }
